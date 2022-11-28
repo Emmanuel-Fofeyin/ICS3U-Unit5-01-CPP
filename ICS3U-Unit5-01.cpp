@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-void CelsiusToFahrenheit() {
+void fahrenheit() {
     float celsiusTemp;
     float fahrenheitTemp;
     std::string celsiusString;
@@ -27,7 +27,7 @@ void CelsiusToFahrenheit() {
     }
 }
 int main() {
-    CelsiusToFahrenheit();
+    fahrenheit();
 
     std::cout << "\nDone." << std::endl;
 }
