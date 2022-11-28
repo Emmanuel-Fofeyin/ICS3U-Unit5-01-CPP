@@ -7,27 +7,27 @@
 #include <iostream>
 #include <string>
 
-std::string celsiusString;
-int celsiusTemp;
-int fahrenheitTemp;
+void CelsiusToFahrenheit() {
+    float celsiusTemp;
+    float fahrenheitTemp;
+    std::string celsiusString;
 
-void fahrenheit() {
+    // Input
     std::cout << "Enter a temperature (°C): ";
-    std::cin >> celsiusTemp;
+    std::cin >> celsiusString;
 
-    std::cout << "\n";
+    // Process and Output
     try {
         celsiusTemp = std::stof(celsiusString);
-        fahrenheitTemp = 9.0 / 5.0 * fahrenheitTemp + 32;
-        std::cout << celsiusTemp << "°C is equal to "
-                  << fahrenheitTemp << "°F.";
+        fahrenheitTemp = 9 / 5 * celsiusTemp + 32;
+        std::cout << "" << std::endl;
+        std::cout << celsiusTemp << "°C is equal to " << fahrenheitTemp << "°F." << std::endl;
     } catch (std::invalid_argument) {
-        std::cout << celsiusString << ",is invalid input please try again.";
+        std::cout << "Invalid Input." << std::endl;
     }
-
-    std::cout << "\n\n\nDone.\n";
 }
-
 int main() {
-    fahrenheit();
+    CelsiusToFahrenheit();
+
+    std::cout << "\nDone." << std::endl;
 }
